@@ -1,288 +1,546 @@
-	<!DOCTYPE html>
-	<html lang="zh-CN">
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>中华人民共和国成立76周年国庆招待会</title>
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-	    <style>
-	        :root {
-	            --primary-color: #c8102e;
-	            --secondary-color: #ffde00;
-	            --dark-color: #1a1a1a;
-	            --light-bg: #f8f9fa;
-	        }
-	        body {
-	            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
-	            color: var(--dark-color);
-	            background-color: var(--light-bg);
-	        }
-	        .hero-section {
-	            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7));
-	            background-size: cover;
-	            background-position: center;
-	            color: white;
-	            padding: 80px 0;
-	            text-align: center;
-	            position: relative;
-	        }
-	        .hero-section::after {
-	            content: '';
-	            position: absolute;
-	            bottom: 0;
-	            left: 0;
-	            width: 100%;
-	            height: 10px;
-	            background: linear-gradient(90deg, var(--primary-color) 33.33%, var(--secondary-color) 33.33%, var(--secondary-color) 66.66%, var(--primary-color) 66.66%);
-	        }
-	        .hero-title {
-	            font-size: 2.8rem;
-	            font-weight: bold;
-	            margin-bottom: 20px;
-	            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	        }
-	        .hero-subtitle {
-	            font-size: 1.5rem;
-	            margin-bottom: 30px;
-	        }
-	        .info-card {
-	            background-color: white;
-	            border-radius: 10px;
-	            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	            padding: 25px;
-	            margin-bottom: 30px;
-	            transition: transform 0.3s ease;
-	        }
-	        .info-card:hover {
-	            transform: translateY(-5px);
-	        }
-	        .agenda-item {
-	            border-left: 4px solid var(--primary-color);
-	            padding-left: 20px;
-	            margin-bottom: 25px;
-	            position: relative;
-	        }
-	        .agenda-time {
-	            font-weight: bold;
-	            color: var(--primary-color);
-	            font-size: 1.1rem;
-	        }
-	        .agenda-title {
-	            font-size: 1.3rem;
-	            font-weight: bold;
-	            margin: 5px 0;
-	        }
-	        .agenda-desc {
-	            color: #555;
-	        }
-	        .section-title {
-	            font-size: 2rem;
-	            font-weight: bold;
-	            margin-bottom: 30px;
-	            position: relative;
-	            display: inline-block;
-	        }
-	        .section-title::after {
-	            content: '';
-	            position: absolute;
-	            bottom: -10px;
-	            left: 0;
-	            width: 70px;
-	            height: 4px;
-	            background-color: var(--primary-color);
-	        }
-	        .cultural-showcase {
-	            background-color: white;
-	            border-radius: 10px;
-	            overflow: hidden;
-	            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-	            margin-bottom: 20px;
-	            transition: transform 0.3s ease;
-	        }
-	        .cultural-showcase:hover {
-	            transform: translateY(-5px);
-	        }
-	        .cultural-img {
-	            height: 200px;
-	            object-fit: cover;
-	            width: 100%;
-	        }
-	        .cultural-content {
-	            padding: 20px;
-	        }
-	        .cultural-title {
-	            font-size: 1.2rem;
-	            font-weight: bold;
-	            margin-bottom: 10px;
-	            color: var(--primary-color);
-	        }
-	        .footer {
-	            background-color: var(--dark-color);
-	            color: white;
-	            padding: 40px 0;
-	            margin-top: 60px;
-	        }
-	        .flag-icon {
-	            font-size: 1.5rem;
-	            margin-right: 10px;
-	            color: var(--primary-color);
-	        }
-	        .btn-primary-custom {
-	            background-color: var(--primary-color);
-	            border: none;
-	            color: white;
-	            padding: 10px 25px;
-	            font-weight: bold;
-	            border-radius: 5px;
-	            transition: all 0.3s ease;
-	        }
-	        .btn-primary-custom:hover {
-	            background-color: #a00d26;
-	            color: white;
-	        }
-	    </style>
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>中华人民共和国成立76周年国庆招待会 | National Day Reception</title>
+  <meta name="description" content="中华人民共和国驻缅甸联邦共和国大使馆举办的国庆招待会（双语页面），时间：2025年10月1日 18:00–21:00（仰光时间），地点：XXX酒店。" />
+  <meta name="theme-color" content="#a60f1c" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="中华人民共和国成立76周年国庆招待会 | National Day Reception" />
+  <meta property="og:description" content="双语 | 时间：2025年10月1日 18:00–21:00（仰光时间），地点：XXX酒店。" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-	    <div class="hero-section">
-	        <div class="container">
-	            <h1 class="hero-title">中华人民共和国驻缅甸联邦共和国大使馆</h1>
-	            <p class="hero-subtitle">庆祝中华人民共和国成立76周年国庆招待会</p>
-	            <div class="d-flex justify-content-center">
-	                <button class="btn btn-primary-custom me-3">
-	                    <i class="bi bi-calendar-event me-2"></i>2025年10月1日
-	                </button>
-	                <button class="btn btn-outline-light">
-	                    <i class="bi bi-geo-alt me-2"></i>XXX酒店
-	                </button>
-	            </div>
-	        </div>
-	    </div>
-	    <!-- 主要内容 -->
-	    <div class="container my-5">
-	        <!-- 招待会基本信息 -->
-	        <div class="row mb-5">
-	            <div class="col-lg-12">
-	                <div class="info-card">
-	                    <div class="row align-items-center">
-	                        <div class="col-md-6">
-	                            <h2 class="section-title">招待会信息</h2>
-	                            <p><i class="bi bi-calendar-check flag-icon"></i><strong>日期：</strong>2025年10月1日</p>
-	                            <p><i class="bi bi-clock flag-icon"></i><strong>时间：</strong>18:00 - 21:00</p>
-	                            <p><i class="bi bi-geo-alt flag-icon"></i><strong>地点：</strong>XXX酒店</p>
-	                        </div>
-	                        <div class="col-md-6 text-center">
-	                            
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	        <!-- 详细议程 -->
-	        <div class="row mb-5">
-	            <div class="col-lg-12">
-	                <h2 class="section-title mb-4">招待会议程</h2>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">18:00 - 18:30</div>
-	                    <div class="agenda-title">嘉宾签到</div>
-	                    <div class="agenda-desc">嘉宾抵达签到，播放中国发展成就视频，提供迎宾礼品</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">18:30 - 18:45</div>
-	                    <div class="agenda-title">开场致辞</div>
-	                    <div class="agenda-desc">大使致辞，回顾新中国成立以来的发展成就，介绍中缅友好关系发展历程</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">18:45 - 19:00</div>
-	                    <div class="agenda-title">缅甸领导人致辞</div>
-	                    <div class="agenda-desc">缅甸领导人致辞，表达对中国的祝贺和友好祝愿，与大使共同切蛋糕</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">19:00 - 19:45</div>
-	                    <div class="agenda-title">文艺表演</div>
-	                    <div class="agenda-desc">XXX</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">19:45 - 20:15</div>
-	                    <div class="agenda-title">文化互动展示</div>
-	                    <div class="agenda-desc">"XXX"图片展</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">20:15 - 20:45</div>
-	                    <div class="agenda-title">美食品尝</div>
-	                    <div class="agenda-desc">中国传统美食展示与品尝，中缅美食文化交流</div>
-	                </div>
-	                <div class="agenda-item">
-	                    <div class="agenda-time">20:45 - 21:00</div>
-	                    <div class="agenda-title">自由交流</div>
-	                    <div class="agenda-desc">中外嘉宾自由交流，合影留念</div>
-	                </div>
-	            </div>
-	        </div>
-	        <!-- 文化展示 -->
-	        <div class="row mb-5">
-	            <div class="col-lg-12">
-	                <h2 class="section-title mb-4">文化展示</h2>
-	                <div class="row">
-	                    <div class="col-md-4 mb-4">
-	                        <div class="cultural-showcase">
-	                            
-	                            <div class="cultural-content">
-	                                <h3 class="cultural-title">XXX表演</h3>
-	                                <p>XXX</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-4 mb-4">
-	                        <div class="cultural-showcase">
-	                            
-	                            <div class="cultural-content">
-	                                <h3 class="cultural-title">XXX演奏</h3>
-	                                <p>XXX</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-4 mb-4">
-	                        <div class="cultural-showcase">
-	                           
-	                            <div class="cultural-content">
-	                                <h3 class="cultural-title">XXX体验</h3>
-	                                <p>XXX</p>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	        <!-- 联系信息 -->
-	        <div class="row">
-	            <div class="col-lg-12">
-	                <div class="info-card text-center">
-	                    <h2 class="section-title">联系我们</h2>
-	                    <p class="mb-3">如有任何疑问，请联系使馆工作人员</p>
-	                    <p><i class="bi bi-telephone flag-icon"></i>电话：+XX XXX XXX XXXX</p>
-	                    <p><i class="bi bi-envelope flag-icon"></i>邮箱：chinaemb_mm@mfa.gov.cn</p>
-	                    
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    <!-- 页脚 -->
-	    <footer class="footer">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-md-6">
-	                    <h5>中华人民共和国驻缅甸使馆</h5>
-	                    <p>庆祝中华人民共和国成立76周年</p>
-	                </div>
-	                <div class="col-md-6 text-md-end">
-	                    <p>© 2025 中华人民共和国驻缅甸大使馆 版权所有</p>
-	                    
-	                </div>
-	            </div>
-	        </div>
-	    </footer>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	</body>
-	</html>
+  <!-- Tailwind CDN with custom theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#a60f1c',
+              50: '#fdecee', 100: '#fad9d9', 200: '#f3b4b4', 300: '#ea8d8e', 400: '#e06969',
+              500: '#d54043', 600: '#a60f1c', 700: '#860e1a', 800: '#640b13', 900: '#3d060b'
+            },
+            gold: {
+              DEFAULT: '#d9b56b',
+              50: '#fff8e9', 100: '#fdf0d3', 200: '#f8e2ae', 300: '#f1d58d', 400: '#e7c87a',
+              500: '#d9b56b', 600: '#c39e53', 700: '#a57f36', 800: '#816228', 900: '#5f4820'
+            },
+            ivory: '#fff7e6',
+            paper: '#f8f5ef',
+            ink: '#1f1b19',
+            neutral: { 900: '#111827', 700: '#374151', 500: '#6b7280', 100: '#f3f4f6' }
+          },
+          boxShadow: { brand: '0 16px 40px rgba(166, 15, 28, .22)' }
+        }
+      }
+    }
+  </script>
+
+  <!-- Flowbite (Tailwind 组件库) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.css" rel="stylesheet" />
+
+  <style>
+    :root{ --gold:#d9b56b; }
+    .gold-stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle,var(--gold) 2px,transparent 2px),radial-gradient(circle,var(--gold) 1px,transparent 1px);background-size:50px 50px,30px 30px;background-position:0 0,25px 25px;opacity:.08;animation:sparkle 3s linear infinite}
+    @keyframes sparkle{0%{opacity:.08}50%{opacity:.2}100%{opacity:.08}}
+    .flag-stripe{position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(90deg,#a60f1c 33.33%,#d9b56b 33.33%,#d9b56b 66.66%,#a60f1c 66.66%)}
+    .skip-link{position:absolute;left:-9999px;top:0;background:#000;color:#fff;padding:.5rem .75rem;z-index:10000}
+    .skip-link:focus{left:.5rem;top:.5rem}
+
+    /* —— 水印（不遮挡正文） —— */
+    .hero-watermark{
+      position:absolute; inset:0; pointer-events:none;
+      display:flex; align-items:flex-end; justify-content:center;
+      z-index:0; opacity:.06; mix-blend-mode:soft-light;
+      -webkit-mask-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0) 0 40%, rgba(0,0,0,.85) 58%, #000 68%);
+              mask-image: radial-gradient(circle at 50% 30%, rgba(0,0,0,0) 0 40%, rgba(0,0,0,.85) 58%, #000 68%);
+    }
+    @media (max-width:640px){
+      .hero-watermark{ opacity:.045; }
+    }
+
+    /* 金色数字“76”水印样式（柔和） */
+    .hero-76{font-weight:800;line-height:.85;background:linear-gradient(180deg,#f5e8c1 0%,#e7c87a 48%,#b7873a 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:blur(.3px) drop-shadow(0 8px 24px rgba(0,0,0,.18));letter-spacing:-.04em;}
+
+    /* 天安门线稿底部水印（更淡） */
+    .tiananmen{ opacity:.16; mix-blend-mode:soft-light; filter: blur(.2px); }
+    .tiananmen path{ stroke:var(--gold); stroke-opacity:.55; }
+    @media (max-width:640px){ .tiananmen{ opacity:.12; } }
+
+    @media (prefers-reduced-motion: reduce){.gold-stars{animation:none}}
+    @media print{.no-print{display:none!important} a[href]:after{content:" (" attr(href) ")";font-size:.9em}}
+  </style>
+</head>
+<body class="bg-paper text-ink dark:bg-neutral-900 dark:text-neutral-100">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- Hero：渐变 + 水印，不遮挡正文 -->
+  <header class="relative text-ivory" role="banner" aria-label="活动横幅" style="background-image:radial-gradient(60% 120% at 50% 0%, rgba(233,196,118,.12), transparent 60%), linear-gradient(180deg, #a60f1c 0%, #9a1b1b 45%, #6e1114 100%);background-size:cover;background-position:center;">
+    <div class="gold-stars" aria-hidden="true"></div>
+
+    <!-- 水印：金色“76”（限制在底层） -->
+    <div aria-hidden="true" class="hero-watermark z-0">
+      <div class="hero-76 select-none text-[32vw] sm:text-[22vw] md:text-[18vw]">76</div>
+    </div>
+
+    <div class="container mx-auto px-4 pt-16 pb-24 sm:pt-20 sm:pb-28 relative z-10">
+      <!-- 顶部工具条：时区徽标 + 语言与主题开关（移动端自动换行） -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
+        <div class="inline-flex items-center gap-2 rounded-full border border-ivory/30 bg-ivory/10 px-3 py-1 backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-gold"></span>
+          <span class="text-sm" data-i18n="heroBadge">时间以仰光 (UTC+6:30) 为准</span>
+        </div>
+        <!-- 语言切换 segmented -->
+        <div class="inline-flex rounded-xl bg-ivory/10 ring-1 ring-ivory/30 overflow-hidden" role="group" aria-label="Language switch">
+          <button id="langZh" class="px-3 py-1.5 text-sm font-semibold text-ivory/90 hover:bg-ivory/10 data-[active=true]:bg-ivory data-[active=true]:text-primary" data-active="true">中</button>
+          <button id="langEn" class="px-3 py-1.5 text-sm font-semibold text-ivory/90 hover:bg-ivory/10 data-[active=true]:bg-ivory data-[active=true]:text-primary">EN</button>
+        </div>
+        <!-- 主题开关（默认浅色） -->
+        <button id="themeToggle" class="inline-flex items-center gap-2 rounded-xl border border-ivory/40 px-3 py-2 text-ivory/90 transition hover:bg-ivory/10" aria-label="切换深色模式">
+          <svg id="themeIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414"/></svg>
+        </button>
+      </div>
+
+      <div class="mt-6 text-center">
+        <h1 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-5xl" data-i18n="heroTitle">中华人民共和国驻缅甸联邦共和国大使馆</h1>
+        <p class="mt-2 text-lg font-semibold text-gold sm:text-xl" data-i18n="heroSubtitle">庆祝中华人民共和国成立76周年国庆招待会</p>
+        <p class="mt-1 text-xs tracking-[0.25em] uppercase text-ivory/90" data-i18n="happyND">HAPPY NATIONAL DAY</p>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 no-print" role="group" aria-label="主要操作">
+          <button id="addToCalendarBtn" class="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 font-bold text-ivory shadow-brand transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-4 focus-visible:outline-gold">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+            <span data-i18n="addToCalendar">添加到日历</span>
+          </button>
+          <a id="mapLink" class="inline-flex items-center gap-2 rounded-xl border border-gold px-5 py-3 font-bold text-gold transition hover:bg-gold hover:text-primary focus-visible:outline focus-visible:outline-4 focus-visible:outline-gold" href="#" target="_blank" rel="noopener">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg>
+            <span data-i18n="viewMap">查看地图</span>
+          </a>
+          <button data-modal-target="regretModal" data-modal-toggle="regretModal" class="inline-flex items-center gap-2 rounded-xl border border-ivory/40 px-5 py-3 font-bold text-ivory/95 transition hover:bg-ivory/10 focus-visible:outline focus-visible:outline-4 focus-visible:outline-gold">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+            <span data-i18n="regretBtn">无法出席登记</span>
+          </button>
+        </div>
+
+        <div class="mt-4 flex items-center justify-center gap-3 text-ivory/90">
+          <span class="text-sm" data-i18n="yearsSpan">1949—2025</span>
+          <span aria-hidden="true">•</span>
+          <div id="countdown" class="text-sm" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- 底部建筑线稿为浅水印 -->
+      <div aria-hidden="true" class="absolute bottom-1 left-1/2 -translate-x-1/2">
+        <svg class="tiananmen" width="600" height="72" viewBox="0 0 680 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke-width="1.2" vector-effect="non-scaling-stroke" fill="none">
+            <path d="M60 62h560"/>
+            <path d="M100 56h480M130 56V46h420v10"/>
+            <path d="M160 46V36h360v10"/>
+            <path d="M190 36v-8h300v8"/>
+            <path d="M220 28l120-16h0l120 16"/>
+            <path d="M260 20l80-12 80 12"/>
+            <path d="M250 36h180"/>
+            <path d="M200 62v-6h280v6"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="flag-stripe" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" class="container mx-auto px-4 py-10" tabindex="-1">
+    <!-- 招待会信息 -->
+    <section aria-labelledby="info-title" class="mb-10">
+      <h2 id="info-title" class="relative inline-block text-2xl font-extrabold text-primary after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-20 after:bg-primary" data-i18n="infoSectionTitle">招待会信息</h2>
+      <div class="mt-5 rounded-2xl border-t-4 border-primary bg-ivory p-6 shadow-brand dark:bg-neutral-800">
+        <div class="grid gap-6 md:grid-cols-2 md:items-center">
+          <div class="space-y-2">
+            <p class="flex flex-wrap items-center gap-2"><svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg><strong data-i18n="dateLabel">日期：</strong>2025年10月1日<span class="hidden sm:inline" data-i18n="weekdaySuffix">（星期三）</span></p>
+            <p class="flex flex-wrap items-center gap-2"><svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg><strong data-i18n="timeLabel">时间：</strong>18:00–21:00 <span data-i18n="yangonTime">（仰光时间）</span></p>
+            <p class="flex flex-wrap items-center gap-2"><svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 10.5-7.5 10.5S4.5 18 4.5 10.5a7.5 7.5 0 1 1 15 0z"/></svg><strong data-i18n="venueLabel">地点：</strong><span id="venueName">XXX酒店</span></p>
+            <p class="mt-3 text-neutral-700 dark:text-neutral-300"><span class="font-semibold" data-i18n="tipPrefix">提示：</span><span data-i18n="tipText">请凭请柬按时入场，着装建议：正装/民族服饰。</span></p>
+          </div>
+          <div class="flex justify-start gap-3 md:justify-end no-print">
+            <button onclick="window.print()" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300 px-5 py-3 font-bold text-neutral-700 transition hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-700/40">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7 8V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v4M7 16H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2M9 16h6v5H9z"/></svg>
+              <span data-i18n="printPage">打印页面</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 议程 -->
+    <section aria-labelledby="agenda-title" class="mb-10">
+      <h2 id="agenda-title" class="relative inline-block text-2xl font-extrabold text-primary after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-20 after:bg-primary" data-i18n="agendaTitle">招待会议程</h2>
+      <div class="mt-5 grid gap-5">
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T18:00:00+06:30">18:00 - 18:30</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda1Title">嘉宾签到</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda1Desc">嘉宾抵达签到，播放中国发展成就视频，提供迎宾礼品</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T18:30:00+06:30">18:30 - 18:45</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda2Title">开场致辞</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda2Desc">大使/使节致辞，回顾新中国成立以来的发展成就，介绍中缅友好关系发展历程</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T18:45:00+06:30">18:45 - 19:00</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda3Title">缅甸领导人致辞</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda3Desc">缅甸领导人致辞，表达对中国的祝贺和友好祝愿</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T19:00:00+06:30">19:00 - 19:45</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda4Title">文艺表演</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda4Desc">XXX</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T19:45:00+06:30">19:45 - 20:15</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda5Title">文化互动展示</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda5Desc">“XXX”图片展</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T20:15:00+06:30">20:15 - 20:45</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda6Title">美食品尝</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda6Desc">中国传统美食展示与品尝，中缅美食文化交流</p>
+        </div>
+        <div class="border-l-4 border-primary bg-ivory p-4 shadow-sm ring-1 ring-black/5 dark:bg-neutral-800">
+          <div class="text-primary font-extrabold"><time datetime="2025-10-01T20:45:00+06:30">20:45 - 21:00</time></div>
+          <div class="mt-1 text-lg font-extrabold" data-i18n="agenda7Title">自由交流</div>
+          <p class="mt-1 text-neutral-700 dark:text-neutral-300" data-i18n="agenda7Desc">中外嘉宾自由交流，合影留念</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 文化展示 -->
+    <section aria-labelledby="culture-title" class="mb-10">
+      <h2 id="culture-title" class="relative inline-block text-2xl font-extrabold text-primary after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-20 after:bg-primary" data-i18n="cultureTitle">文化展示</h2>
+      <div class="mt-5 grid gap-6 md:grid-cols-3">
+        <article class="group overflow-hidden rounded-2xl border-t-4 border-primary bg-ivory shadow-brand transition hover:-translate-y-1 dark:bg-neutral-800">
+          <img class="h-52 w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1549890762-0a3f8933bcf3?auto=format&fit=crop&w=900&q=60" alt="文艺表演示意图" loading="lazy" />
+          <div class="p-5">
+            <h3 class="text-lg font-extrabold text-primary" data-i18n="cultureItem1">XXX表演</h3>
+            <p class="mt-1 text-neutral-700 dark:text-neutral-300">XXX</p>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border-t-4 border-primary bg-ivory shadow-brand transition hover:-translate-y-1 dark:bg-neutral-800">
+          <img class="h-52 w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=900&q=60" alt="乐器演奏示意图" loading="lazy" />
+          <div class="p-5">
+            <h3 class="text-lg font-extrabold text-primary" data-i18n="cultureItem2">XXX演奏</h3>
+            <p class="mt-1 text-neutral-700 dark:text-neutral-300">XXX</p>
+          </div>
+        </article>
+        <article class="group overflow-hidden rounded-2xl border-t-4 border-primary bg-ivory shadow-brand transition hover:-translate-y-1 dark:bg-neutral-800">
+          <img class="h-52 w-full object-cover transition duration-300 group-hover:scale-105" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=900&q=60" alt="文化互动体验示意图" loading="lazy" />
+          <div class="p-5">
+            <h3 class="text-lg font-extrabold text-primary" data-i18n="cultureItem3">XXX体验</h3>
+            <p class="mt-1 text-neutral-700 dark:text-neutral-300">XXX</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title" class="relative inline-block text-2xl font-extrabold text-primary after:absolute after:-bottom-2 after:left:0 after:h-1 after:w-20 after:bg-primary" data-i18n="contactTitle">联系我们</h2>
+      <div class="mt-5 rounded-2xl border-t-4 border-primary bg-ivory p-8 text-center shadow-brand dark:bg-neutral-800">
+        <p class="text-neutral-700 dark:text-neutral-300" data-i18n="contactIntro">如有任何疑问，请联系使馆工作人员</p>
+        <p class="mt-2 flex items-center justify-center gap-2"><svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5l5 2 2 5-3 3a16 16 0 0 0 8 8l3-3 5 2 2-5-6-6-5-2-3-4z"/></svg><span data-i18n="telLabel">电话：</span>+XX XXX XXX XXXX</p>
+        <p class="mt-1 flex items-center justify-center gap-2"><svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"/></svg><span data-i18n="emailLabel">邮箱：</span><a class="font-semibold hover:underline" href="mailto:chinaemb_mm@mfa.gov.cn">chinaemb_mm@mfa.gov.cn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-14 bg-neutral-900 py-10 text-neutral-200">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <h5 class="text-lg font-bold" data-i18n="footerOrg">中华人民共和国驻缅甸大使馆</h5>
+          <p class="text-neutral-400" data-i18n="footerTag">庆祝中华人民共和国成立76周年</p>
+        </div>
+        <p class="text-neutral-400" data-i18n="footerCopy">© 2025 中华人民共和国驻缅甸大使馆 版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Regret Modal (不克出席登记) + Google 表单嵌入/外链 -->
+  <div id="regretModal" tabindex="-1" aria-hidden="true" class="fixed inset-0 z-50 hidden overflow-y-auto overflow-x-hidden p-4">
+    <div class="relative mx-auto my-8 w-full max-w-2xl">
+      <div class="relative rounded-2xl bg-ivory shadow-xl dark:bg-neutral-800">
+        <div class="flex items-center justify-between border-b px-6 py-4 dark:border-neutral-700">
+          <h5 class="text-lg font-bold" data-i18n="regretTitle">无法出席登记</h5>
+          <button type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700" data-modal-hide="regretModal" aria-label="关闭">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="px-6 py-5 space-y-4">
+          <p class="text-sm text-neutral-700 dark:text-neutral-300" data-i18n="regretIntro">如您不克出席，请填写下方 Google 表单便于我们联系与后续安排。</p>
+          <!-- 嵌入式表单（替换为你的嵌入链接） -->
+          <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 overflow-hidden">
+            <iframe id="gFormFrame" src="" class="h-[70vh] w-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <small class="text-neutral-500" data-i18n="regretPrivacy">您的信息仅用于活动沟通，不会对外公开。</small>
+            <a id="gFormOpenBtn" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl border border-neutral-300 px-4 py-2 font-semibold text-neutral-700 hover:bg-neutral-50 dark:border-neutral-600 dark:text-neutral-200 dark:hover:bg-neutral-700/40">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 3h7v7M10 14 21 3M5 7v14h14"/></svg>
+              <span data-i18n="openForm">在新窗口打开表单</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="fixed bottom-5 right-5 hidden rounded-full bg-primary p-3 text-ivory shadow-brand transition hover:bg-primary-700" aria-label="返回顶部">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Flowbite JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js" defer></script>
+
+  <script>
+    // ===== 可配置占位符 =====
+    const EVENT_TITLE = '中华人民共和国成立76周年国庆招待会';
+    const VENUE_NAME = 'XXX酒店';
+    const VENUE_QUERY = 'XXX酒店 仰光';
+    const EVENT_START_ISO_TZ = '2025-10-01T18:00:00+06:30';
+    const EVENT_END_ISO_TZ   = '2025-10-01T21:00:00+06:30';
+
+    // Google 表单链接（请替换）
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/XXXXXXXX/viewform'; // 外链
+    const GOOGLE_FORM_EMBED_URL = 'https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true'; // 嵌入
+
+    // ====== 语言包（简体中文 / English） ======
+    const I18N = {
+      zh: {
+        heroBadge: '时间以仰光 (UTC+6:30) 为准',
+        heroTitle: '中华人民共和国驻缅甸联邦共和国大使馆',
+        heroSubtitle: '庆祝中华人民共和国成立76周年国庆招待会',
+        happyND: 'HAPPY NATIONAL DAY',
+        yearsSpan: '1949—2025',
+        addToCalendar: '添加到日历',
+        viewMap: '查看地图',
+        regretBtn: '无法出席登记',
+        infoSectionTitle: '招待会信息',
+        dateLabel: '日期：',
+        weekdaySuffix: '（星期三）',
+        timeLabel: '时间：',
+        yangonTime: '（仰光时间）',
+        venueLabel: '地点：',
+        tipPrefix: '提示：',
+        tipText: '请凭请柬按时入场，着装建议：正装/民族服饰。',
+        printPage: '打印页面',
+        agendaTitle: '招待会议程',
+        agenda1Title: '嘉宾签到',
+        agenda1Desc: '嘉宾抵达签到，播放中国发展成就视频，提供迎宾礼品',
+        agenda2Title: '开场致辞',
+        agenda2Desc: '大使/使节致辞，回顾新中国成立以来的发展成就，介绍中缅友好关系发展历程',
+        agenda3Title: '缅甸领导人致辞',
+        agenda3Desc: '缅甸领导人致辞，表达对中国的祝贺和友好祝愿',
+        agenda4Title: '文艺表演',
+        agenda4Desc: 'XXX',
+        agenda5Title: '文化互动展示',
+        agenda5Desc: '“XXX”图片展',
+        agenda6Title: '美食品尝',
+        agenda6Desc: '中国传统美食展示与品尝，中缅美食文化交流',
+        agenda7Title: '自由交流',
+        agenda7Desc: '中外嘉宾自由交流，合影留念',
+        cultureTitle: '文化展示',
+        cultureItem1: 'XXX表演',
+        cultureItem2: 'XXX演奏',
+        cultureItem3: 'XXX体验',
+        contactTitle: '联系我们',
+        contactIntro: '如有任何疑问，请联系使馆工作人员',
+        telLabel: '电话：',
+        emailLabel: '邮箱：',
+        footerOrg: '中华人民共和国驻缅甸大使馆',
+        footerTag: '庆祝中华人民共和国成立76周年',
+        footerCopy: '© 2025 中华人民共和国驻缅甸大使馆 版权所有',
+        regretTitle: '无法出席登记',
+        regretIntro: '如您不克出席，请填写下方 Google 表单便于我们联系与后续安排。',
+        regretPrivacy: '您的信息仅用于活动沟通，不会对外公开。',
+        openForm: '在新窗口打开表单',
+        countdownPrefix: '倒计时：',
+        countdownDays: '天',
+        inProgress: '活动进行中',
+        ended: '活动已结束'
+      },
+      en: {
+        heroBadge: 'Times are in Yangon (UTC+6:30)',
+        heroTitle: "Embassy of the People's Republic of China in the Republic of the Union of Myanmar",
+        heroSubtitle: 'National Day Reception • 76th Anniversary of the PRC',
+        happyND: 'HAPPY NATIONAL DAY',
+        yearsSpan: '1949—2025',
+        addToCalendar: 'Add to Calendar',
+        viewMap: 'View Map',
+        regretBtn: 'Regret (Unable to Attend)',
+        infoSectionTitle: 'Event Information',
+        dateLabel: 'Date: ',
+        weekdaySuffix: ' (Wednesday)',
+        timeLabel: 'Time: ',
+        yangonTime: ' (Yangon Time)',
+        venueLabel: 'Venue: ',
+        tipPrefix: 'Note: ',
+        tipText: 'Please bring your invitation and arrive on time. Dress code: formal or national attire.',
+        printPage: 'Print Page',
+        agendaTitle: 'Programme',
+        agenda1Title: 'Guest Registration',
+        agenda1Desc: 'Check-in upon arrival; play video on China’s development; welcome gifts',
+        agenda2Title: 'Opening Remarks',
+        agenda2Desc: 'Remarks by the Ambassador; review of achievements; China–Myanmar friendship',
+        agenda3Title: 'Remarks by Myanmar Leaders',
+        agenda3Desc: 'Congratulations and best wishes to China',
+        agenda4Title: 'Cultural Performances',
+        agenda4Desc: 'XXX',
+        agenda5Title: 'Cultural Exhibition',
+        agenda5Desc: '“XXX” photo exhibition',
+        agenda6Title: 'Cuisine Tasting',
+        agenda6Desc: 'Chinese traditional cuisine tasting; culinary exchange',
+        agenda7Title: 'Networking & Photos',
+        agenda7Desc: 'Free networking; group photos',
+        cultureTitle: 'Cultural Showcase',
+        cultureItem1: 'XXX Performance',
+        cultureItem2: 'XXX Recital',
+        cultureItem3: 'XXX Experience',
+        contactTitle: 'Contact Us',
+        contactIntro: 'For inquiries, please contact the Embassy staff.',
+        telLabel: 'Tel: ',
+        emailLabel: 'Email: ',
+        footerOrg: 'Embassy of the PRC in Myanmar',
+        footerTag: 'Celebrating the 76th Anniversary of the PRC',
+        footerCopy: '© 2025 Embassy of the PRC in Myanmar. All Rights Reserved.',
+        regretTitle: 'Regret (Unable to Attend)',
+        regretIntro: 'If you are unable to attend, please complete the Google Form below so we can follow up accordingly.',
+        regretPrivacy: 'Your information will only be used for event communication and will not be disclosed.',
+        openForm: 'Open Form in New Window',
+        countdownPrefix: 'Countdown: ',
+        countdownDays: 'd',
+        inProgress: 'In progress',
+        ended: 'Event ended'
+      }
+    };
+
+    // ====== 地图链接 ======
+    const mapLink = document.getElementById('mapLink');
+    if (mapLink) {
+      const q = encodeURIComponent(VENUE_QUERY);
+      mapLink.href = `https://www.google.com/maps/search/?api=1&query=${q}`;
+      mapLink.setAttribute('aria-label', `打开地图到${VENUE_NAME}`);
+    }
+
+    // ====== 倒计时（按仰光时间目标） ======
+    const countdownEl = document.getElementById('countdown');
+    function pad(n){return String(n).padStart(2,'0');}
+    function updateCountdown(){
+      const now = new Date();
+      const start = new Date(EVENT_START_ISO_TZ);
+      const end = new Date(EVENT_END_ISO_TZ);
+      const diff = start - now;
+      const t = I18N[currentLang];
+      if (diff <= 0){
+        countdownEl.textContent = (now <= end) ? t.inProgress : t.ended;
+        return;
+      }
+      const s = Math.floor(diff/1000);
+      const d = Math.floor(s/86400);
+      const h = Math.floor((s%86400)/3600);
+      const m = Math.floor((s%3600)/60);
+      const ss = s%60;
+      countdownEl.textContent = `${t.countdownPrefix}${d}${t.countdownDays} ${pad(h)}:${pad(m)}:${pad(ss)}`;
+    }
+
+    // ====== iCalendar(.ics) 生成 ======
+    function icsEscape(str){return String(str).replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');}
+    function toUTCBasic(dt){const y=dt.getUTCFullYear(),m=String(dt.getUTCMonth()+1).padStart(2,'0'),d=String(dt.getUTCDate()).padStart(2,'0'),hh=String(dt.getUTCHours()).padStart(2,'0'),mm=String(dt.getUTCMinutes()).padStart(2,'0'),ss=String(dt.getUTCSeconds()).padStart(2,'0');return `${y}${m}${d}T${hh}${mm}${ss}Z`;}
+    function downloadICS(){
+      const now = new Date();
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Embassy of PRC in Myanmar//National Day Reception//CN','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',
+        `UID:${Date.now()}@china-emb-mm`,
+        `DTSTAMP:${toUTCBasic(now)}`,
+        `DTSTART:${toUTCBasic(new Date(EVENT_START_ISO_TZ))}`,
+        `DTEND:${toUTCBasic(new Date(EVENT_END_ISO_TZ))}`,
+        `SUMMARY:${icsEscape(EVENT_TITLE)}`,
+        `DESCRIPTION:${icsEscape('请提前抵达。时间以仰光(UTC+6:30)为准。/ Please arrive early. Time in Yangon (UTC+6:30).')}`,
+        `LOCATION:${icsEscape(VENUE_NAME)}`,'END:VEVENT','END:VCALENDAR' ].join('\r\n');
+      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = Object.assign(document.createElement('a'), { href:url, download:'NationalDayReception.html.ics' });
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+    document.getElementById('addToCalendarBtn')?.addEventListener('click', downloadICS);
+
+    // ====== 返回顶部 ======
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', ()=>{ backBtn.classList.toggle('hidden', window.scrollY < 400); });
+    backBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // （已移除 RSVP 表单功能）
+
+    // ====== Google 表单嵌入/外链 ======
+    (function(){
+      const frame = document.getElementById('gFormFrame');
+      const btn = document.getElementById('gFormOpenBtn');
+      if (GOOGLE_FORM_EMBED_URL && frame) frame.src = GOOGLE_FORM_EMBED_URL;
+      if (GOOGLE_FORM_URL && btn) btn.href = GOOGLE_FORM_URL;
+    })();
+
+    // ====== 语言切换（默认浅色，默认中文） ======
+    const htmlEl = document.documentElement;
+    const DEFAULT_LANG = 'zh';
+    let currentLang = localStorage.getItem('lang') || DEFAULT_LANG;
+    function applyI18n(lang){
+      const dict = I18N[lang] || I18N.zh;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+      htmlEl.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+      htmlEl.setAttribute('data-lang', lang);
+      localStorage.setItem('lang', lang);
+      currentLang = lang;
+      updateCountdown();
+      // 切换 segmented 激活态
+      document.getElementById('langZh').setAttribute('data-active', String(lang==='zh'));
+      document.getElementById('langEn').setAttribute('data-active', String(lang==='en'));
+    }
+    document.getElementById('langZh')?.addEventListener('click', ()=> applyI18n('zh'));
+    document.getElementById('langEn')?.addEventListener('click', ()=> applyI18n('en'));
+
+    // 初始：应用语言（默认中文）
+    applyI18n(currentLang);
+
+    // ====== 深色模式（默认浅色，不跟随系统；仅记忆用户选择） ======
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') htmlEl.classList.add('dark');
+    function renderThemeIcon(){
+      themeIcon.innerHTML = htmlEl.classList.contains('dark')
+        ? '<path d="M21.64 13a9 9 0 11-10.63-10.63 1 1 0 00.91 1.45A7 7 0 1019.19 12a1 1 0 001.45-.91z"/>'
+        : '<path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414"/>';
+    }
+    renderThemeIcon();
+    themeToggle?.addEventListener('click', ()=>{
+      htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+      renderThemeIcon();
+    });
+
+    // 初始：倒计时
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ====== 同步场地名 ======
+    const venueNameEl = document.getElementById('venueName');
+    if (venueNameEl) venueNameEl.textContent = VENUE_NAME;
+  </script>
+</body>
+</html>
