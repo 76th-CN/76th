@@ -100,10 +100,6 @@
           <button id="langZh" class="px-3 py-1.5 text-sm font-semibold text-ivory/90 hover:bg-ivory/10 data-[active=true]:bg-ivory data-[active=true]:text-primary" data-active="true">中</button>
           <button id="langEn" class="px-3 py-1.5 text-sm font-semibold text-ivory/90 hover:bg-ivory/10 data-[active=true]:bg-ivory data-[active=true]:text-primary">EN</button>
         </div>
-        <!-- 主题开关（默认浅色） -->
-        <button id="themeToggle" class="inline-flex items-center gap-2 rounded-xl border border-ivory/40 px-3 py-2 text-ivory/90 transition hover:bg-ivory/10" aria-label="切换深色模式">
-          <svg id="themeIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364 6.364l-1.414-1.414M7.05 7.05 5.636 5.636m12.728 0-1.414 1.414M7.05 16.95l-1.414 1.414"/></svg>
-        </button>
       </div>
 
       <div class="mt-6 text-center">
@@ -280,7 +276,7 @@
           </button>
         </div>
         <div class="px-6 py-5 space-y-4">
-          <p class="text-sm text-neutral-700 dark:text-neutral-300" data-i18n="regretIntro">如您不克出席，请填写下方 Google 表单便于我们联系与后续安排。</p>
+          <p class="text-sm text-neutral-700 dark:text-neutral-300" data-i18n="regretIntro">如您无法出席，请填写下方 Google 表单便于我们联系与后续安排。</p>
           <!-- 嵌入式表单（替换为你的嵌入链接） -->
           <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 overflow-hidden">
             <iframe id="gFormFrame" src="" class="h-[70vh] w-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -308,10 +304,10 @@
   <script>
     // ===== 可配置占位符 =====
     const EVENT_TITLE = '中华人民共和国成立76周年国庆招待会';
-    const VENUE_NAME = 'XXX酒店';
-    const VENUE_QUERY = 'XXX酒店 仰光';
-    const EVENT_START_ISO_TZ = '2025-10-01T18:00:00+06:30';
-    const EVENT_END_ISO_TZ   = '2025-10-01T21:00:00+06:30';
+    const VENUE_NAME = '温德姆酒店';
+    const VENUE_QUERY = 'WYNDHAM GRAND YANGON Hotel';
+    const EVENT_START_ISO_TZ = '2025-9-26T18:00:00+06:30';
+    const EVENT_END_ISO_TZ   = '2025-9-26T21:00:00+06:30';
 
     // Google 表单链接（请替换）
     const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/XXXXXXXX/viewform'; // 外链
@@ -544,3 +540,4 @@
   </script>
 </body>
 </html>
+
